@@ -11,7 +11,7 @@ export default function AboutSection() {
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div className="space-y-6">
             <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
-              A Journey of Sustainable Well-being
+              Hành Trình Sức Khỏe Bền Vững
             </h2>
             <blockquote className="border-l-4 border-primary pl-6 text-xl italic text-foreground/80">
               “Yoga không là sự phô trương, mà là hành trình bền vững”
@@ -20,7 +20,7 @@ export default function AboutSection() {
               🪷🧱 Tập luyện mỗi ngày như cách ta thêm từng viên gạch nhỏ, dựng xây nền móng vững chắc cho cơ thể khỏe mạnh và tâm trí an yên 🙏🧡
             </p>
             <p className="text-muted-foreground">
-              At Luv Yoga, we believe in building a strong foundation for a healthy body and a peaceful mind, one day at a time. Our practice focuses on alignment, therapeutic recovery, and above all, safety.
+              Tại Luv Yoga, chúng tôi tin vào việc xây dựng nền tảng vững chắc cho một cơ thể khỏe mạnh và tâm trí an yên, mỗi ngày một chút. Phương pháp của chúng tôi tập trung vào định tuyến, phục hồi trị liệu, và trên hết là sự an toàn.
             </p>
           </div>
           <div className="flex justify-center">

@@ -14,11 +14,11 @@ import { Button } from '@/components/ui/button';
 import { Menu, Dumbbell } from 'lucide-react';
 
 const navLinks = [
-  { name: 'About', href: '#about' },
-  { name: 'Classes', href: '#classes' },
-  { name: 'Therapy', href: '#therapy' },
-  { name: 'AI Guide', href: '#ai-guide' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Giới Thiệu', href: '#about' },
+  { name: 'Lịch Tập', href: '#classes' },
+  { name: 'Trị Liệu', href: '#therapy' },
+  { name: 'Hướng Dẫn AI', href: '#ai-guide' },
+  { name: 'Liên Hệ', href: '#contact' },
 ];
 
 export default function Header() {

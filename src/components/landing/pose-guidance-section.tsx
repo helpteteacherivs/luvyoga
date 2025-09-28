@@ -16,10 +16,10 @@ export default function PoseGuidanceSection() {
               <CardHeader className="p-0">
                 <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl flex items-center gap-3">
                   <Sparkles className="h-8 w-8 text-accent" />
-                  AI-Powered Pose Guidance
+                  Hướng Dẫn Tư Thế với AI
                 </h2>
                 <CardDescription className="mt-4 text-lg text-muted-foreground">
-                  Not sure where to start? Describe your current posture or how you're feeling, and our AI assistant will suggest beneficial yoga poses just for you.
+                  Bạn không chắc nên bắt đầu từ đâu? Hãy mô tả tư thế hiện tại hoặc cảm giác của bạn, và trợ lý AI của chúng tôi sẽ đề xuất các tư thế yoga có lợi dành riêng cho bạn.
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-0 mt-8">

@@ -26,8 +26,8 @@ export default function PoseFinder() {
     e.preventDefault();
     if (!posture.trim()) {
       toast({
-        title: 'Input Required',
-        description: 'Please describe your posture before generating recommendations.',
+        title: 'Yêu cầu nhập thông tin',
+        description: 'Vui lòng mô tả tư thế của bạn trước khi tạo đề xuất.',
         variant: 'destructive',
       });
       return;
@@ -42,7 +42,7 @@ export default function PoseFinder() {
     if (result.error) {
       setError(result.error);
       toast({
-        title: 'Error',
+        title: 'Lỗi',
         description: result.error,
         variant: 'destructive',
       });
@@ -57,7 +57,7 @@ export default function PoseFinder() {
     <div className="space-y-6">
       <form onSubmit={handleSubmit} className="space-y-4">
         <Textarea
-          placeholder="e.g., 'I have rounded shoulders and my neck feels tight from sitting at a desk all day.'"
+          placeholder="Ví dụ: 'Vai của tôi bị gù và cổ cảm thấy căng cứng do ngồi làm việc cả ngày.'"
           value={posture}
           onChange={(e) => setPosture(e.target.value)}
           rows={4}
@@ -67,12 +67,12 @@ export default function PoseFinder() {
           {isLoading ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Generating...
+              Đang tạo...
             </>
           ) : (
              <>
               <Sparkles className="mr-2 h-4 w-4" />
-              Get Recommendations
+              Nhận Đề Xuất
             </>
           )}
         </Button>
@@ -81,14 +81,14 @@ export default function PoseFinder() {
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
-          <AlertTitle>Error</AlertTitle>
+          <AlertTitle>Lỗi</AlertTitle>
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
 
       {recommendations && (
         <div className="space-y-4">
-          <h3 className="font-headline text-2xl font-bold">Recommended Poses</h3>
+          <h3 className="font-headline text-2xl font-bold">Tư thế được đề xuất</h3>
           <Accordion type="single" collapsible className="w-full">
             {recommendations.recommendedPoses.map((pose, index) => (
               <AccordionItem value={`item-${index}`} key={index}>
@@ -99,17 +99,17 @@ export default function PoseFinder() {
                   <p className="text-muted-foreground">{pose.description}</p>
                   
                   <div>
-                    <h4 className="font-semibold">Instructions:</h4>
+                    <h4 className="font-semibold">Hướng dẫn:</h4>
                     <p className="whitespace-pre-line text-muted-foreground">{pose.instructions}</p>
                   </div>
                   
                   <div>
-                    <h4 className="font-semibold text-destructive/80">Precautions:</h4>
+                    <h4 className="font-semibold text-destructive/80">Lưu ý:</h4>
                     <p className="whitespace-pre-line text-muted-foreground">{pose.precautions}</p>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-primary/90">Benefits:</h4>
+                    <h4 className="font-semibold text-primary/90">Lợi ích:</h4>
                     <p className="whitespace-pre-line text-muted-foreground">{pose.benefits}</p>
                   </div>
 

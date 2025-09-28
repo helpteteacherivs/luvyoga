@@ -19,20 +19,20 @@ export default function HeroSection() {
         />
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/20 to-transparent" />
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
         <div className="max-w-3xl rounded-lg bg-black/30 p-8 backdrop-blur-sm">
           <h1 className="font-headline text-5xl font-bold tracking-tight text-primary-foreground drop-shadow-lg md:text-7xl">
-            LUV YOGA SANCTUARY
+            LUV YOGA - CHỐN AN YÊN
           </h1>
           <p className="mt-4 text-lg text-primary-foreground/90 drop-shadow-md md:text-xl">
             Yoga định tuyến và hỗ trợ trị liệu phục hồi, đề cao sức khoẻ và sự an toàn trong tập luyện.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              <Link href="#classes">View Classes</Link>
+              <Link href="#classes">Xem Lịch Tập</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground/10">
-              <Link href="#contact">Contact Us</Link>
+            <Button asChild size="lg" variant="outline" className="border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-accent-foreground">
+              <Link href="#contact">Liên Hệ</Link>
             </Button>
           </div>
         </div>

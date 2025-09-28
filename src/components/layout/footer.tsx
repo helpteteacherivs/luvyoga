@@ -31,12 +31,12 @@ export default function Footer() {
               Yêu Yoga hơn mỗi ngày.
             </p>
              <p className="mt-2 text-muted-foreground">
-              More everyday.
+              Love Yoga more everyday.
             </p>
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-headline text-lg font-semibold">Contact Us</h3>
+            <h3 className="font-headline text-lg font-semibold">Liên Hệ</h3>
             <div className="space-y-3 text-muted-foreground">
               <a
                 href="https://maps.app.goo.gl/Z7b8kdwoQcx2y4JPA"
@@ -59,7 +59,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-headline text-lg font-semibold">Follow Us</h3>
+            <h3 className="font-headline text-lg font-semibold">Theo Dõi</h3>
             <div className="flex space-x-4">
               {socialLinks.map(({ name, href, icon: Icon }) => (
                 <Link
@@ -78,7 +78,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Luv Yoga Sanctuary. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Luv Yoga Sanctuary. Đã đăng ký bản quyền.</p>
         </div>
       </div>
     </footer>

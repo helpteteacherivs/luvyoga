@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Clock, CheckCircle, User, MapPin, Globe } from 'lucide-react';
+import { Clock, CheckCircle, User, MapPin, Globe, Phone } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -36,21 +36,21 @@ const privateClassTimes = [
 const BookingDialog = () => (
   <Dialog>
     <DialogTrigger asChild>
-      <Button variant="outline" className="w-full">Book Private Session</Button>
+      <Button variant="outline" className="w-full">Đặt Lịch Tập Riêng</Button>
     </DialogTrigger>
     <DialogContent className="sm:max-w-[425px]">
       <DialogHeader>
-        <DialogTitle className="font-headline">Book a Private or Therapy Session</DialogTitle>
+        <DialogTitle className="font-headline">Đặt Lịch Tập Riêng hoặc Trị Liệu</DialogTitle>
         <DialogDescription>
-          For personalized sessions, please contact us directly to schedule an appointment.
+          Đối với các buổi tập cá nhân, vui lòng liên hệ trực tiếp với chúng tôi để sắp xếp lịch hẹn.
         </DialogDescription>
       </DialogHeader>
       <div className="space-y-4 py-4">
-        <p className='text-sm text-muted-foreground'>Please call or email to arrange a time that suits you.</p>
+        <p className='text-sm text-muted-foreground'>Vui lòng gọi điện hoặc email để sắp xếp thời gian phù hợp với bạn.</p>
         <a href="tel:0352518855" className="flex items-center gap-4 rounded-lg border p-4 transition-colors hover:bg-secondary">
-          <Clock className="h-6 w-6 text-primary" />
+          <Phone className="h-6 w-6 text-primary" />
           <div>
-            <p className="font-semibold">Phone</p>
+            <p className="font-semibold">Điện thoại</p>
             <p className="text-muted-foreground">035 251 8855</p>
           </div>
         </a>
@@ -65,17 +65,17 @@ export default function TherapySection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
-            Therapy & Private Sessions
+            Trị Liệu & Lớp Riêng
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Personalized care to support your healing and growth journey.
+            Chăm sóc cá nhân hóa để hỗ trợ hành trình chữa lành và phát triển của bạn.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <Card className="flex flex-col shadow-lg">
             <CardHeader>
               <CardTitle className="font-headline">Hỗ trợ trị liệu</CardTitle>
-              <CardDescription>Targeted support for various conditions. Please book in advance.</CardDescription>
+              <CardDescription>Hỗ trợ chuyên biệt cho các tình trạng khác nhau. Vui lòng đặt lịch trước.</CardDescription>
             </CardHeader>
             <CardContent className="flex-grow space-y-3">
               {therapyServices.map((service) => (
@@ -90,11 +90,11 @@ export default function TherapySection() {
           <Card className="flex flex-col shadow-lg">
             <CardHeader>
               <CardTitle className="font-headline flex items-center gap-2"><User className="h-6 w-6" /> Kèm 1:1 Yoga Trị Liệu</CardTitle>
-              <CardDescription>One-on-one therapeutic yoga sessions tailored to your needs.</CardDescription>
+              <CardDescription>Các buổi tập yoga trị liệu 1-1 được thiết kế riêng theo nhu cầu của bạn.</CardDescription>
             </CardHeader>
             <CardContent className="flex-grow space-y-4">
               <div>
-                <h4 className="font-semibold">Available Times:</h4>
+                <h4 className="font-semibold">Thời gian có sẵn:</h4>
                 <div className="mt-2 space-y-2">
                   {privateClassTimes.map((time) => (
                     <div key={time} className="flex items-center gap-3">
@@ -105,15 +105,15 @@ export default function TherapySection() {
                 </div>
               </div>
               <div>
-                <h4 className="font-semibold">Location Options:</h4>
+                <h4 className="font-semibold">Địa điểm:</h4>
                 <div className="mt-2 space-y-2">
                   <div className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-muted-foreground" />
-                    <span>Offline (Studio or Home within 10km)</span>
+                    <span>Offline (Tại studio hoặc tại nhà trong vòng 10km)</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Globe className="h-5 w-5 text-muted-foreground" />
-                    <span>Online (Nationwide)</span>
+                    <span>Online (Toàn quốc)</span>
                   </div>
                 </div>
               </div>
