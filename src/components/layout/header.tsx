@@ -17,24 +17,28 @@ const navLinks = [
   { name: 'Giới Thiệu', href: '/#about' },
   { name: 'Lịch Tập', href: '/#classes' },
   { name: 'Trị Liệu', href: '/#therapy' },
-  { name: 'Album', href: '/album' },
+  { name: 'Blogs', href: '/blogs' },
   { name: 'Liên Hệ', href: '/#contact' },
 ];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isClient, setIsClient] = React.useState(false);
 
   React.useEffect(() => {
+    setIsClient(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Set initial state
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
   // Custom navigation logic for homepage vs other pages
   const navItems = navLinks.map(link => {
-    const isHomePage = typeof window !== 'undefined' && window.location.pathname === '/';
+    if (!isClient) return link;
+    const isHomePage = window.location.pathname === '/';
     const finalHref = (isHomePage || link.href.startsWith('/')) ? link.href : `/${link.href}`;
     return { ...link, href: finalHref };
   });
