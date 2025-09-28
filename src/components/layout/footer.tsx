@@ -79,6 +79,18 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Luv Yoga Sanctuary. Đã đăng ký bản quyền.</p>
+          <p className="mt-2">
+            Designed by{' '}
+            <a
+              href="https://ivsacademy.edu.vn/pages/webdesign"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-primary"
+            >
+              IVS Celestech, IVS JSC
+            </a>
+            .
+          </p>
         </div>
       </div>
     </footer>
