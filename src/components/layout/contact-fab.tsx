@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Facebook, Instagram, Mail, Phone, Plus, X } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, Plus, X, ArrowUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
@@ -36,10 +36,42 @@ const socialLinks = [
 
 export default function ContactFAB() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
       <div className="relative flex flex-col items-center gap-2">
+        {isVisible && (
+           <Button
+            onClick={scrollToTop}
+            size="icon"
+            className="h-12 w-12 rounded-full bg-secondary text-secondary-foreground shadow-lg transition-opacity hover:bg-secondary/80"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp className="h-6 w-6" />
+          </Button>
+        )}
         {isOpen && (
           <div className="flex flex-col gap-3 transition-all duration-300">
             {socialLinks.map((link, index) => (
