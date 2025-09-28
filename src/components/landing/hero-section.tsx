@@ -5,7 +5,10 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Logo } from '@/components/icons';
 
 export default function HeroSection() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
+  // Prefer the local uploaded image (local1) but fall back to the original hero placeholder
+  const heroImage =
+    PlaceHolderImages.find((img) => img.id === 'local1') ||
+    PlaceHolderImages.find((img) => img.id === 'hero');
 
   return (
     <section className="relative h-[60dvh] w-full bg-background">

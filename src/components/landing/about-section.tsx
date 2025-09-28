@@ -3,7 +3,10 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function AboutSection() {
-  const aboutImage = PlaceHolderImages.find((img) => img.id === 'about');
+  // Prefer the local uploaded about image (local2) but fall back to the remote/about placeholder
+  const aboutImage =
+    PlaceHolderImages.find((img) => img.id === 'local2') ||
+    PlaceHolderImages.find((img) => img.id === 'about');
 
   return (
     <section id="about" className="py-16 sm:py-24">
