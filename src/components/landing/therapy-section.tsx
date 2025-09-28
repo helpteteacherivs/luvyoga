@@ -46,12 +46,40 @@ const BookingDialog = () => (
         </DialogDescription>
       </DialogHeader>
       <div className="space-y-4 py-4">
-        <p className='text-sm text-muted-foreground'>Vui lòng gọi điện hoặc email để sắp xếp thời gian phù hợp với bạn.</p>
+        <p className='text-sm text-muted-foreground'>Vui lòng gọi điện, nhắn Messenger hoặc email để sắp xếp thời gian phù hợp với bạn.</p>
         <a href="tel:0352518855" className="flex items-center gap-4 rounded-lg border p-4 transition-colors hover:bg-secondary">
           <Phone className="h-6 w-6 text-primary" />
           <div>
             <p className="font-semibold">Điện thoại</p>
             <p className="text-muted-foreground">035 251 8855</p>
+          </div>
+        </a>
+        <a href="mailto:luvyoga.official@gmail.com" className="flex items-center gap-4 rounded-lg border p-4 transition-colors hover:bg-secondary">
+          <Phone className="h-6 w-6 text-primary" />
+          <div>
+            <p className="font-semibold">Email</p>
+            <p className="text-muted-foreground">luvyoga.official@gmail.com</p>
+          </div>
+        </a>
+        <a href="https://m.me/LuvYoga.Official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 rounded-lg border p-4 transition-colors hover:bg-secondary">
+          <Phone className="h-6 w-6 text-primary" />
+          <div>
+            <p className="font-semibold">Messenger</p>
+            <p className="text-muted-foreground">m.me/LuvYoga.Official</p>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/luvyoga.official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 rounded-lg border p-4 transition-colors hover:bg-secondary">
+          <Phone className="h-6 w-6 text-primary" />
+          <div>
+            <p className="font-semibold">Instagram</p>
+            <p className="text-muted-foreground">@luvyoga.official</p>
+          </div>
+        </a>
+        <a href="https://www.facebook.com/LuvYoga.Official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 rounded-lg border p-4 transition-colors hover:bg-secondary">
+          <Phone className="h-6 w-6 text-primary" />
+          <div>
+            <p className="font-semibold">Facebook</p>
+            <p className="text-muted-foreground">/LuvYoga.Official</p>
           </div>
         </a>
       </div>

@@ -59,6 +59,20 @@ const BookingDialog = () => (
                 <p className="text-muted-foreground">LuvYoga.Official</p>
             </div>
         </a>
+    <a href="https://www.instagram.com/luvyoga.official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 rounded-lg border p-4 transition-colors hover:bg-secondary">
+      <MessageCircle className="h-6 w-6 text-primary" />
+      <div>
+        <p className="font-semibold">Instagram</p>
+        <p className="text-muted-foreground">@luvyoga.official</p>
+      </div>
+    </a>
+    <a href="https://www.facebook.com/LuvYoga.Official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 rounded-lg border p-4 transition-colors hover:bg-secondary">
+      <MessageCircle className="h-6 w-6 text-primary" />
+      <div>
+        <p className="font-semibold">Facebook</p>
+        <p className="text-muted-foreground">/LuvYoga.Official</p>
+      </div>
+    </a>
       </div>
     </DialogContent>
   </Dialog>

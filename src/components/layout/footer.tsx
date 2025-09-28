@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Logo } from '@/components/icons';
-import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
+import { Facebook, Instagram, Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   const socialLinks = [
@@ -54,6 +54,10 @@ export default function Footer() {
               <a href="mailto:luvyoga.official@gmail.com" className="flex items-center gap-3 transition-colors hover:text-primary">
                 <Mail className="h-5 w-5 flex-shrink-0" />
                 <span>luvyoga.official@gmail.com</span>
+              </a>
+              <a href="https://m.me/LuvYoga.Official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-primary">
+                <MessageCircle className="h-5 w-5 flex-shrink-0" />
+                <span>m.me/LuvYoga.Official</span>
               </a>
             </div>
           </div>

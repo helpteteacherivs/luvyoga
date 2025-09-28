@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Facebook, Instagram, Mail, Phone, Plus, X, ArrowUp } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, Plus, X, ArrowUp, MessageCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
@@ -18,6 +18,12 @@ const socialLinks = [
     href: 'mailto:luvyoga.official@gmail.com',
     icon: Mail,
     bgColor: 'bg-yellow-500 hover:bg-yellow-600',
+  },
+  {
+    name: 'Messenger',
+    href: 'https://m.me/LuvYoga.Official',
+    icon: MessageCircle,
+    bgColor: 'bg-blue-500 hover:bg-blue-600',
   },
   {
     name: 'Facebook',
