@@ -1,5 +1,3 @@
-# Firebase Studio
+# IVS Celestech
 
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+ivsacademy.edu.vn/pages/webdesign.html
