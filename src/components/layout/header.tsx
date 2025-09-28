@@ -14,10 +14,11 @@ import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Giới Thiệu', href: '#about' },
-  { name: 'Lịch Tập', href: '#classes' },
-  { name: 'Trị Liệu', href: '#therapy' },
-  { name: 'Liên Hệ', href: '#contact' },
+  { name: 'Giới Thiệu', href: '/#about' },
+  { name: 'Lịch Tập', href: '/#classes' },
+  { name: 'Trị Liệu', href: '/#therapy' },
+  { name: 'Album', href: '/album' },
+  { name: 'Liên Hệ', href: '/#contact' },
 ];
 
 export default function Header() {
@@ -30,6 +31,14 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  // Custom navigation logic for homepage vs other pages
+  const navItems = navLinks.map(link => {
+    const isHomePage = typeof window !== 'undefined' && window.location.pathname === '/';
+    const finalHref = (isHomePage || link.href.startsWith('/')) ? link.href : `/${link.href}`;
+    return { ...link, href: finalHref };
+  });
+
 
   return (
     <header
@@ -48,7 +57,7 @@ export default function Header() {
           </span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
-          {navLinks.map((link) => (
+          {navItems.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -76,7 +85,7 @@ export default function Header() {
                   </span>
                 </Link>
                 <nav className="flex flex-col gap-4">
-                  {navLinks.map((link) => (
+                  {navItems.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
