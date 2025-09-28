@@ -13,7 +13,7 @@ export default function HeroSection() {
           src={heroImage.imageUrl}
           alt={heroImage.description}
           fill
-          className="object-contain object-bottom"
+          className="object-cover object-center"
           priority
           data-ai-hint={heroImage.imageHint}
         />
