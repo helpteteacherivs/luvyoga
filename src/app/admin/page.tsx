@@ -1,8 +1,15 @@
+
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
 
 const students = [
   { id: 'HV001', name: 'Nguyễn Văn A', course: 'Yoga Cơ Bản', status: 'Đang học' },
@@ -19,14 +26,48 @@ const courses = [
 ];
 
 export default function AdminPage() {
+  const router = useRouter();
+  const { toast } = useToast();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const isAdmin = localStorage.getItem('isAdmin') === 'true';
+    if (!isAdmin) {
+      router.push('/login');
+    } else {
+      setIsAuthenticated(true);
+    }
+  }, [router]);
+
+  const handleLogout = () => {
+    localStorage.removeItem('isAdmin');
+    toast({
+        title: "Đã đăng xuất",
+        description: "Bạn đã đăng xuất thành công.",
+    })
+    router.push('/login');
+  };
+
+  if (!isAuthenticated) {
+    return (
+        <div className="flex min-h-dvh flex-col items-center justify-center">
+            <p>Đang chuyển hướng đến trang đăng nhập...</p>
+        </div>
+    );
+  }
+
   return (
     <div className="flex min-h-dvh flex-col">
       <Header />
       <main className="flex-1 bg-muted/40 p-4 sm:p-8">
         <div className="mx-auto max-w-7xl space-y-8">
-          <div className="text-center">
-            <h1 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Trang Quản Trị</h1>
-            <p className="mt-4 text-lg text-muted-foreground">Quản lý học viên và các khóa học của Luv Yoga.</p>
+          <div className="flex justify-between items-center text-center">
+            <div></div>
+            <div>
+              <h1 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Trang Quản Trị</h1>
+              <p className="mt-4 text-lg text-muted-foreground">Quản lý học viên và các khóa học của Luv Yoga.</p>
+            </div>
+            <Button onClick={handleLogout} variant="destructive">Đăng xuất</Button>
           </div>
 
           <Card>

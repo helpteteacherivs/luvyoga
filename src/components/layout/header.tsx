@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from 'react';
@@ -26,9 +27,13 @@ const navLinks = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isClient, setIsClient] = React.useState(false);
+  const [isAdmin, setIsAdmin] = React.useState(false);
 
   React.useEffect(() => {
     setIsClient(true);
+    if (typeof window !== 'undefined') {
+        setIsAdmin(localStorage.getItem('isAdmin') === 'true');
+    }
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
@@ -38,12 +43,18 @@ export default function Header() {
   }, []);
   
   // Custom navigation logic for homepage vs other pages
-  const navItems = navLinks.map(link => {
-    if (!isClient) return link;
-    const isHomePage = window.location.pathname === '/';
-    const finalHref = (isHomePage || link.href.startsWith('/')) ? link.href : `/${link.href}`;
-    return { ...link, href: finalHref };
-  });
+  const navItems = navLinks
+    .filter(link => {
+        // Hide Admin link if not logged in
+        if (link.name === 'Quản Trị' && !isAdmin) return false;
+        return true;
+    })
+    .map(link => {
+        if (!isClient) return link;
+        const isHomePage = window.location.pathname === '/';
+        const finalHref = (isHomePage || link.href.startsWith('/')) ? link.href : `/${link.href}`;
+        return { ...link, href: finalHref };
+    });
 
 
   return (
