@@ -19,7 +19,6 @@ const navLinks = [
   { name: 'Lịch Tập', href: '/#classes' },
   { name: 'Trị Liệu', href: '/#therapy' },
   { name: 'Blogs', href: '/blogs' },
-  { name: 'Album', href: '/album' },
   { name: 'Quản Trị', href: '/admin' },
   { name: 'Liên Hệ', href: '/#contact' },
 ];
