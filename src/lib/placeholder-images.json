@@ -53,13 +53,13 @@
     {
       "id": "site-logo",
       "description": "Site logo for Luv Yoga",
-      "imageUrl": "/images/logo-luvyoga.jpg",
+      "imageUrl": "/images/gallery-1.jpg",
       "imageHint": "logo"
     },
     {
       "id": "site-banner",
       "description": "Site banner for hero section",
-      "imageUrl": "/images/banner-luvyoga.jpg",
+      "imageUrl": "/images/new-class-poster.jpeg",
       "imageHint": "banner"
     }
   ]
