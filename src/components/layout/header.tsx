@@ -60,15 +60,16 @@ export default function Header() {
     <header
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
+        // Use a warm brown background when scrolled, transparent otherwise
         isScrolled
-          ? 'bg-background/80 backdrop-blur-sm shadow-md'
+          ? 'bg-[#6b3e2b]/95 shadow-md'
           : 'bg-transparent'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <Logo className="h-8 w-8 text-foreground" />
-          <span className="font-headline text-2xl font-semibold text-foreground">
+          <Logo className="h-8 w-8 text-white" />
+          <span className="font-headline text-2xl font-semibold text-white">
             Luv Yoga
           </span>
         </Link>
@@ -77,7 +78,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-medium text-foreground/80 transition-colors hover:text-primary"
+              className="font-medium text-white transition-colors hover:text-white/80"
               prefetch={false}
             >
               {link.name}
@@ -88,15 +89,15 @@ export default function Header() {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+                <Menu className="h-6 w-6 text-white" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
               <div className="flex flex-col gap-6 p-6">
                 <Link href="/" className="flex items-center gap-2" prefetch={false}>
-                  <Logo className="h-8 w-8 text-primary" />
-                  <span className="font-headline text-2xl font-semibold">
+                  <Logo className="h-8 w-8 text-white" />
+                  <span className="font-headline text-2xl font-semibold text-white">
                     Luv Yoga
                   </span>
                 </Link>
@@ -105,7 +106,7 @@ export default function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary"
+                      className="text-lg font-medium text-white transition-colors hover:text-white/80"
                       prefetch={false}
                     >
                       {link.name}
