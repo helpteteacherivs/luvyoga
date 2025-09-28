@@ -2,21 +2,37 @@ import { cn } from "@/lib/utils";
 
 export const Logo = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
+    width="107"
+    height="32"
+    viewBox="0 0 107 32"
     fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={cn("size-8", className)}
+    xmlns="http://www.w3.org/2000/svg"
+    className={cn("h-8 w-auto", className)}
     {...props}
   >
-    <path d="M12 2c-3.33 0-6 2.67-6 6 0 2.25 1.25 4.25 3 5.33V18c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-4.67c1.75-1.08 3-3.08 3-5.33 0-3.33-2.67-6-6-6z" />
-    <path d="M12 12c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
-    <path d="M20 14c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2s2-.9 2-2v-2c0-1.1-.9-2-2-2z" />
-    <path d="M4 14c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2s2-.9 2-2v-2c0-1.1-.9-2-2-2z" />
-    <path d="M16 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-    <path d="M8 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+    <path
+      d="M21.2334 31.0116V14.1337C21.2334 9.17643 17.2407 5.18372 12.2834 5.18372H8.56673V0.831055H12.2834C19.5796 0.831055 25.5834 6.83486 25.5834 14.131V31.0116H21.2334Z"
+      fill="currentColor"
+    />
+    <path
+      d="M0.833374 31.0116V14.1337C0.833374 9.17643 4.82609 5.18372 9.78337 5.18372H13.5V0.831055H9.78337C2.48718 0.831055 -3.51663 6.83486 -3.51663 14.131V31.0116H0.833374Z"
+      fill="currentColor"
+    />
+    <path
+      d="M48.2435 1C42.8021 1 38.333 5.46914 38.333 10.9105V23.7199C38.333 28.1633 41.7451 31.5754 46.1885 31.5754H52.4135V1H48.2435Z"
+      fill="currentColor"
+    />
+    <path
+      d="M74.9084 1C80.3498 1 84.8189 5.46914 84.8189 10.9105V23.7199C84.8189 28.1633 81.4068 31.5754 76.9634 31.5754H70.7384V1H74.9084Z"
+      fill="currentColor"
+    />
+    <path
+      d="M56.4173 1H66.7391V31.5754H56.4173V1Z"
+      fill="currentColor"
+    />
+    <path
+      d="M106.167 0.831055H88.8182V5.18372H106.167V0.831055Z"
+      fill="currentColor"
+    />
   </svg>
 );

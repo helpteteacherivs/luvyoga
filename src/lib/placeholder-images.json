@@ -3,8 +3,8 @@
     {
       "id": "hero",
       "description": "A serene yoga pose in a beautiful natural outdoor setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1520769945061-0a448c463865?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx5b2dhJTIwbmF0dXJlfGVufDB8fHx8MTc1ODk4MTc3OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "yoga nature"
+      "imageUrl": "/images/hero-banner.png",
+      "imageHint": "yoga LUV"
     },
     {
       "id": "about",

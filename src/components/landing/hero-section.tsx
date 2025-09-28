@@ -7,31 +7,30 @@ export default function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
 
   return (
-    <section className="relative h-[80dvh] w-full">
+    <section className="relative h-[60dvh] w-full bg-background">
       {heroImage && (
         <Image
           src={heroImage.imageUrl}
           alt={heroImage.description}
           fill
-          className="object-cover object-center"
+          className="object-contain object-bottom"
           priority
           data-ai-hint={heroImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/20 to-transparent" />
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
-        <div className="max-w-3xl rounded-lg bg-black/30 p-8 backdrop-blur-sm">
-          <h1 className="font-headline text-5xl font-bold tracking-tight text-primary-foreground drop-shadow-lg md:text-7xl">
+      <div className="relative z-10 flex h-full flex-col items-center justify-start pt-16 text-center">
+        <div className="max-w-3xl p-8">
+          <h1 className="font-headline text-5xl font-bold tracking-tight text-foreground drop-shadow-lg md:text-7xl">
             LUV YOGA
           </h1>
-          <p className="mt-4 text-lg text-primary-foreground/90 drop-shadow-md md:text-xl">
+          <p className="mt-4 text-lg text-muted-foreground drop-shadow-md md:text-xl">
             Yoga định tuyến và hỗ trợ trị liệu phục hồi, đề cao sức khoẻ và sự an toàn trong tập luyện.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               <Link href="#classes">Xem Lịch Tập</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-accent-foreground">
+            <Button asChild size="lg" variant="outline" className="border-foreground/20 bg-background/50 text-foreground hover:bg-accent hover:text-accent-foreground">
               <Link href="#contact">Liên Hệ</Link>
             </Button>
           </div>
