@@ -62,10 +62,8 @@ export default function Header() {
     <header
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
-        // Use a warm brown background when scrolled, transparent otherwise
-        isScrolled
-          ? 'bg-[#6b3e2b]/95 shadow-md'
-          : 'bg-transparent'
+        // Always use a warm brown background because header text is white
+        'bg-[#6b3e2b] shadow-md'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
