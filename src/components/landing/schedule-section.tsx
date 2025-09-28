@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   Card,
   CardContent,
@@ -7,7 +8,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Clock, Users, Sparkles, Phone, Mail } from 'lucide-react';
+import { Clock, Users, Phone, Mail } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -69,26 +70,17 @@ export default function ScheduleSection() {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <Card className="flex flex-col shadow-lg lg:col-span-1">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 font-headline text-2xl">
-                <Sparkles className="h-6 w-6 text-accent" />
-                Lớp Cho Người Mới
-              </CardTitle>
-              <CardDescription>
-                Hoàn hảo cho những người mới bắt đầu với yoga.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="flex-grow space-y-4">
-              <div className="flex items-center gap-3">
-                <Clock className="h-5 w-5 text-primary" />
-                <span className="text-lg font-medium">08:30 ➡️ 09:45</span>
-              </div>
-              <p className="text-muted-foreground">
-                Một buổi tập đặc biệt được thiết kế để giới thiệu cho bạn những nguyên tắc cơ bản của yoga trong một môi trường thân thiện.
-              </p>
+          <Card className="flex flex-col shadow-lg overflow-hidden lg:col-span-1">
+            <CardContent className="p-0">
+               <Image
+                  src="/images/new-class-poster.jpeg"
+                  alt="Thông báo chiêu sinh lớp Yoga cho người mới"
+                  width={600}
+                  height={750}
+                  className="w-full h-auto object-cover"
+                />
             </CardContent>
-            <CardFooter>
+            <CardFooter className="p-4 mt-auto">
               <BookingDialog />
             </CardFooter>
           </Card>
