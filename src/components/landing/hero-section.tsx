@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
         <div className="max-w-3xl rounded-lg bg-black/30 p-8 backdrop-blur-sm">
           <h1 className="font-headline text-5xl font-bold tracking-tight text-primary-foreground drop-shadow-lg md:text-7xl">
-            LUV YOGA - CHỐN AN YÊN
+            LUV YOGA
           </h1>
           <p className="mt-4 text-lg text-primary-foreground/90 drop-shadow-md md:text-xl">
             Yoga định tuyến và hỗ trợ trị liệu phục hồi, đề cao sức khoẻ và sự an toàn trong tập luyện.
