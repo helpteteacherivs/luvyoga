@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Logo } from '@/components/icons';
 
 export default function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
@@ -19,7 +20,8 @@ export default function HeroSection() {
         />
       )}
       <div className="relative z-10 flex h-full flex-col items-center justify-start pt-16 text-center">
-        <div className="max-w-3xl p-8">
+        <div className="flex max-w-3xl flex-col items-center p-8">
+          <Logo className="mb-4 h-16 w-16 text-foreground drop-shadow-lg" />
           <h1 className="font-headline text-5xl font-bold tracking-tight text-foreground drop-shadow-lg md:text-7xl">
             LUV YOGA
           </h1>
