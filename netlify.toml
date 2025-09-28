@@ -7,4 +7,8 @@
   functions = ".netlify/functions"
 
 [context.production.environment]
-  NODE_ENV = "production"
+  # Ensure devDependencies (like cross-env and the Netlify Next plugin) are installed
+  # during the build. When NODE_ENV or NPM_CONFIG_PRODUCTION is set to 'production'
+  # before install, npm may skip devDependencies which can cause build command
+  # to fail with exit code 127 (command not found).
+  NPM_CONFIG_PRODUCTION = "false"
