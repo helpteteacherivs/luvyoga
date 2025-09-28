@@ -10,7 +10,7 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import { PlusCircle, Edit, Trash2 } from 'lucide-react';
+import { PlusCircle, Edit, Trash2, Download } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -177,6 +177,44 @@ export default function AdminPage() {
       setIsFormOpen(false);
   }
 
+  const handleExportCSV = () => {
+    if (students.length === 0) {
+      toast({
+        title: "Không có dữ liệu",
+        description: "Chưa có học viên nào để xuất file.",
+      });
+      return;
+    }
+
+    const headers = ["Mã HV", "Họ Tên", "Khóa Học", "Ngày Bắt Đầu", "SĐT", "Trạng Thái", "Ghi Chú"];
+    const csvContent = [
+      headers.join(','),
+      ...students.map(student => [
+        student.id,
+        `"${student.name.replace(/"/g, '""')}"`,
+        `"${student.course.replace(/"/g, '""')}"`,
+        student.startDate,
+        student.phone,
+        student.status,
+        `"${(student.notes || '').replace(/"/g, '""')}"`
+      ].join(','))
+    ].join('\n');
+
+    const blob = new Blob([`\uFEFF${csvContent}`], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute("download", "danh-sach-hoc-vien.csv");
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast({
+        title: "Xuất file thành công",
+        description: "Đã tải về tệp danh-sach-hoc-vien.csv",
+    });
+  };
+
   if (!isAuthenticated) {
     return (
         <div className="flex min-h-dvh flex-col items-center justify-center">
@@ -207,11 +245,16 @@ export default function AdminPage() {
                         <CardTitle>Quản Lý Học Viên</CardTitle>
                         <CardDescription>Danh sách tất cả học viên đã đăng ký.</CardDescription>
                     </div>
-                     <DialogTrigger asChild>
-                        <Button onClick={() => openForm()}>
-                            <PlusCircle className="mr-2 h-4 w-4" /> Thêm Học Viên
+                    <div className="flex gap-2">
+                        <Button onClick={handleExportCSV} variant="outline">
+                            <Download className="mr-2 h-4 w-4" /> Xuất File
                         </Button>
-                    </DialogTrigger>
+                        <DialogTrigger asChild>
+                            <Button onClick={() => openForm()}>
+                                <PlusCircle className="mr-2 h-4 w-4" /> Thêm Học Viên
+                            </Button>
+                        </DialogTrigger>
+                    </div>
                 </div>
               </CardHeader>
               <CardContent>
@@ -325,5 +368,3 @@ export default function AdminPage() {
     </div>
   );
 }
-
-    
