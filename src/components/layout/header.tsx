@@ -11,13 +11,12 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import { Menu, Dumbbell } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 const navLinks = [
   { name: 'Giới Thiệu', href: '#about' },
   { name: 'Lịch Tập', href: '#classes' },
   { name: 'Trị Liệu', href: '#therapy' },
-  { name: 'Hướng Dẫn AI', href: '#ai-guide' },
   { name: 'Liên Hệ', href: '#contact' },
 ];
 
