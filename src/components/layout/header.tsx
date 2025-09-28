@@ -6,6 +6,8 @@ import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
 import { Logo } from '@/components/icons';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
   Sheet,
   SheetContent,
@@ -68,7 +70,18 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <Logo className="h-8 w-8 text-white" />
+          {/* If the user provided a local site logo, use it; otherwise use the inline SVG Logo component */}
+          {PlaceHolderImages.find((img) => img.id === 'site-logo') ? (
+            <Image
+              src={PlaceHolderImages.find((img) => img.id === 'site-logo')!.imageUrl}
+              alt="Luv Yoga"
+              width={40}
+              height={40}
+              className="rounded-sm"
+            />
+          ) : (
+            <Logo className="h-8 w-8 text-white" />
+          )}
           <span className="font-headline text-2xl font-semibold text-white">
             Luv Yoga
           </span>

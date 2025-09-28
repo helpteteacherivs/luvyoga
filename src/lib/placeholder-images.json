@@ -49,5 +49,18 @@
       "imageUrl": "/images/class-3.jpg",
       "imageHint": "class 3"
     }
+    ,
+    {
+      "id": "site-logo",
+      "description": "Site logo for Luv Yoga",
+      "imageUrl": "/images/logo-luvyoga.jpg",
+      "imageHint": "logo"
+    },
+    {
+      "id": "site-banner",
+      "description": "Site banner for hero section",
+      "imageUrl": "/images/banner-luvyoga.jpg",
+      "imageHint": "banner"
+    }
   ]
 }

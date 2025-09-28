@@ -5,8 +5,9 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Logo } from '@/components/icons';
 
 export default function HeroSection() {
-  // Prefer the local uploaded image (local1) but fall back to the original hero placeholder
+  // Prefer the site banner, then local uploaded image (local1), then fall back to the original hero placeholder
   const heroImage =
+    PlaceHolderImages.find((img) => img.id === 'site-banner') ||
     PlaceHolderImages.find((img) => img.id === 'local1') ||
     PlaceHolderImages.find((img) => img.id === 'hero');
 
