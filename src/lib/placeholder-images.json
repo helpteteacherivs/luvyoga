@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A serene yoga pose in a beautiful natural outdoor setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1520769945061-0a448c463865?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx5b2dhJTIwbmF0dXJlfGVufDB8fHx8MTc1ODk4MTc3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga nature"
+    },
+    {
+      "id": "about",
+      "description": "A calm and minimalist yoga studio interior.",
+      "imageUrl": "https://images.unsplash.com/photo-1687783615476-f4c12358ca9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8eW9nYSUyMHN0dWRpb3xlbnwwfHx8fDE3NTg5ODQzNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga studio"
+    },
+    {
+      "id": "schedule",
+      "description": "A group of people in a yoga class.",
+      "imageUrl": "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx5b2dhJTIwY2xhc3N8ZW58MHx8fHwxNzU5MDQzNjY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga class"
+    },
+    {
+      "id": "therapy",
+      "description": "A therapist assisting someone with a gentle stretch.",
+      "imageUrl": "https://images.unsplash.com/photo-1540206063137-4a88ca974d1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx5b2dhJTIwdGhlcmFweXxlbnwwfHx8fDE3NTkwNjkzODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga therapy"
+    },
+    {
+      "id": "pose-guidance",
+      "description": "A close-up detail of a person holding a yoga pose, focusing on form.",
+      "imageUrl": "https://images.unsplash.com/photo-1758599879795-536d5f203de9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8eW9nYSUyMGZvcm18ZW58MHx8fHwxNzU5MDY5Mzg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga form"
+    }
+  ]
 }
