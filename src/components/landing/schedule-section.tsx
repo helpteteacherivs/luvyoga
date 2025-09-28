@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Clock, Users, Phone, Mail } from 'lucide-react';
+import { Clock, Users, Phone, Mail, MessageCircle } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -51,6 +51,13 @@ const BookingDialog = () => (
             <p className="font-semibold">Email</p>
             <p className="text-muted-foreground">luvyoga.official@gmail.com</p>
           </div>
+        </a>
+        <a href="https://m.me/LuvYoga.Official" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 rounded-lg border p-4 transition-colors hover:bg-secondary">
+            <MessageCircle className="h-6 w-6 text-primary" />
+            <div>
+                <p className="font-semibold">Facebook Messenger</p>
+                <p className="text-muted-foreground">LuvYoga.Official</p>
+            </div>
         </a>
       </div>
     </DialogContent>
