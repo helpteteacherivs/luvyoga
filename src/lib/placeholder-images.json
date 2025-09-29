@@ -59,13 +59,13 @@
     {
       "id": "gallery-4",
       "description": "Gallery image 4",
-      "imageUrl": "/images/gallery-4.png",
+      "imageUrl": "/images/gallery-4.jpg",
       "imageHint": "gallery 4"
     },
     {
       "id": "gallery-5",
       "description": "Gallery image 5",
-      "imageUrl": "/images/gallery-5.png",
+      "imageUrl": "/images/gallery-5.jpg",
       "imageHint": "gallery 5"
     },
     {
