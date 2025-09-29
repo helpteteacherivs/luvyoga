@@ -5,7 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 import ContactFAB from '@/components/layout/contact-fab';
 
 export const metadata: Metadata = {
-  title: 'Luv Yoga - Chốn An Yên',
+  title: 'Luv Yoga - Yêu Yoga hơn mỗi ngày',
   description:
     'Yoga định tuyến và hỗ trợ trị liệu phục hồi, đề cao sức khoẻ và sự an toàn trong tập luyện.',
 };
@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="vi" className="scroll-smooth">
       <head>
+        <link rel="icon" href="/images/logo-luvyoga.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

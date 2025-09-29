@@ -94,7 +94,7 @@ export default function ScheduleSection() {
           <Card className="flex flex-col shadow-lg overflow-hidden lg:col-span-1">
             <CardContent className="p-0">
                <Image
-                  src="/images/new-class-poster.jpeg"
+                  src="/images/lich-luvyoga.jpg"
                   alt="Thông báo chiêu sinh lớp Yoga cho người mới"
                   width={600}
                   height={750}
