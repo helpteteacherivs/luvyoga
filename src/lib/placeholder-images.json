@@ -57,6 +57,18 @@
       "imageHint": "logo"
     },
     {
+      "id": "gallery-4",
+      "description": "Gallery image 4",
+      "imageUrl": "/images/gallery-4.png",
+      "imageHint": "gallery 4"
+    },
+    {
+      "id": "gallery-5",
+      "description": "Gallery image 5",
+      "imageUrl": "/images/gallery-5.png",
+      "imageHint": "gallery 5"
+    },
+    {
       "id": "site-banner",
       "description": "Site banner for hero section",
       "imageUrl": "/images/banner-luvyoga.jpg",
