@@ -81,7 +81,7 @@ export default function Header() {
             <Logo className="h-8 w-8 text-white" />
           )}
           <span className="font-headline text-2xl font-semibold text-white">
-            Luv Yoga
+            Luv Yoga - Yêu Yoga hơn mỗi ngày 
           </span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
@@ -109,7 +109,7 @@ export default function Header() {
                 <Link href="/" className="flex items-center gap-2" prefetch={false}>
                   <Logo className="h-8 w-8 text-white" />
                   <span className="font-headline text-2xl font-semibold text-white drop-shadow-md">
-                    Luv Yoga - Yêu Yoga hơn mỗi ngày 
+                    Luv Yoga
                   </span>
                 </Link>
                 <nav className="flex flex-col gap-4">
