@@ -50,7 +50,7 @@ export default function HeroSection() {
         <h1 className="font-headline text-5xl font-bold tracking-tight text-white drop-shadow-lg md:text-7xl">
           LUV YOGA
         </h1>
-        <p className="mt-4 text-lg text-gray-200 drop-shadow-md md:text-xl">
+        <p className="mt-4 text-lg font-semibold text-white drop-shadow-xl md:text-xl" style={{textShadow: '0 2px 8px rgba(0,0,0,0.35), 0 1px 0 #fff'}}>
           Yoga định tuyến và hỗ trợ trị liệu phục hồi, đề cao sức khoẻ và sự an toàn trong tập luyện.
         </p>
         <div className="mt-8 flex justify-center gap-4">

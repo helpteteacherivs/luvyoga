@@ -104,11 +104,11 @@ export default function Header() {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" className="bg-[#6b3e2b]">
               <div className="flex flex-col gap-6 p-6">
                 <Link href="/" className="flex items-center gap-2" prefetch={false}>
                   <Logo className="h-8 w-8 text-white" />
-                  <span className="font-headline text-2xl font-semibold text-white">
+                  <span className="font-headline text-2xl font-semibold text-white drop-shadow-md">
                     Luv Yoga
                   </span>
                 </Link>
@@ -117,7 +117,7 @@ export default function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-lg font-medium text-white transition-colors hover:text-white/80"
+                      className="text-lg font-medium text-white drop-shadow-md transition-colors hover:text-white/80"
                       prefetch={false}
                     >
                       {link.name}
