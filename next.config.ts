@@ -1,9 +1,10 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "/luvyoga",
-  assetPrefix: "/luvyoga/",
+  output: 'export',
+  // GitHub Pages requires basePath and assetPrefix
+  basePath: '/luvyoga',
+  assetPrefix: '/luvyoga/',
   trailingSlash: true,
   typescript: {
     ignoreBuildErrors: true,
