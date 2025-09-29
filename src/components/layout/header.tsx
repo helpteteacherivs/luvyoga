@@ -109,8 +109,7 @@ export default function Header() {
                 <Link href="/" className="flex items-center gap-2" prefetch={false}>
                   <Logo className="h-8 w-8 text-white" />
                   <span className="font-headline text-2xl font-semibold text-white drop-shadow-md">
-                    Luv Yoga
-                  </span>
+                    <span className="whitespace-nowrap text-lg md:text-2xl"></span>Luv Yoga - Yêu Yoga hơn mỗi ngày</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navItems.map((link) => (
