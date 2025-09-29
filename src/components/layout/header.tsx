@@ -80,8 +80,8 @@ export default function Header() {
           ) : (
             <Logo className="h-8 w-8 text-white" />
           )}
-          <span className="font-headline text-2xl font-semibold text-white">
-            Luv Yoga - Yêu Yoga hơn mỗi ngày 
+          <span className="font-headline text-2xl font-semibold text-white drop-shadow-md">
+            Luv Yoga - Yêu Yoga hơn mỗi ngày
           </span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
