@@ -7,9 +7,12 @@ import { Logo } from '@/components/icons';
 
 
 export default function HeroSection() {
-  // Banner images for desktop and mobile
-  const bannerDesktop = PlaceHolderImages.find((img) => img.id === 'site-banner');
-  const bannerMobile = PlaceHolderImages.find((img) => img.id === 'hero');
+  // Use gallery-1.png for both desktop and mobile banner
+  const galleryImage = {
+    imageUrl: '/images/gallery-1.png',
+    description: 'Yoga studio gallery',
+    imageHint: '',
+  };
 
   return (
     <section className="w-full bg-background">
@@ -17,29 +20,23 @@ export default function HeroSection() {
       <div className="relative w-full h-[60vh] md:h-[60dvh]">
         <div className="absolute inset-0">
           <div className="block md:hidden w-full h-full">
-            {bannerMobile && (
-              <Image
-                src={bannerMobile.imageUrl}
-                alt={bannerMobile.description}
-                fill
-                className="object-cover object-center"
-                priority
-                data-ai-hint={bannerMobile.imageHint}
-              />
-            )}
+            <Image
+              src={galleryImage.imageUrl}
+              alt={galleryImage.description}
+              fill
+              className="object-cover object-center"
+              priority
+            />
             <div className="absolute inset-0 bg-black/30" />
           </div>
           <div className="hidden md:block w-full h-full">
-            {bannerDesktop && (
-              <Image
-                src={bannerDesktop.imageUrl}
-                alt={bannerDesktop.description}
-                fill
-                className="object-cover object-center"
-                priority
-                data-ai-hint={bannerDesktop.imageHint}
-              />
-            )}
+            <Image
+              src={galleryImage.imageUrl}
+              alt={galleryImage.description}
+              fill
+              className="object-cover object-center"
+              priority
+            />
             <div className="absolute inset-0 bg-black/30" />
           </div>
         </div>
