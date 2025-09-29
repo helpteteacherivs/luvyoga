@@ -1,5 +1,8 @@
 import type {NextConfig} from 'next';
 
+const repoName = 'luvyoga';
+const basePath = `/${repoName}`;
+
 const nextConfig: NextConfig = {
   /* config options here */
   typescript: {
@@ -31,6 +34,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  basePath,
+  assetPrefix: basePath,
+  trailingSlash: true,
+  output: 'export',
 };
 
 export default nextConfig;
