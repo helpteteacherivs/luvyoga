@@ -8,7 +8,7 @@ export default function AlbumSection() {
         <div className="mb-12 text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl text-primary">Album Ảnh</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Tất cả hình ảnh của Luv Yoga.
+            Đồng hành cùng Luv Yoga.
           </p>
         </div>
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
