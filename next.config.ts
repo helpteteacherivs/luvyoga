@@ -2,9 +2,7 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  // GitHub Pages requires basePath and assetPrefix
-  basePath: '/luvyoga',
-  assetPrefix: '/luvyoga/',
+  // basePath and assetPrefix removed for root hosting on custom domain
   trailingSlash: true,
   typescript: {
     ignoreBuildErrors: true,
