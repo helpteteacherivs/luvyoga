@@ -95,10 +95,11 @@ export default function ScheduleSection() {
             <CardContent className="p-0">
                <Image
                   src="/images/lich-luvyoga.jpg"
-                  alt="Thông báo chiêu sinh lớp Yoga cho người mới"
+                  alt="Luv Yoga class schedule poster showing morning and evening session times"
                   width={600}
                   height={750}
                   className="w-full h-auto object-cover"
+                  loading="lazy"
                 />
             </CardContent>
             <CardFooter className="p-4 mt-auto">

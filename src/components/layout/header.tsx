@@ -99,24 +99,25 @@ export default function Header() {
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="min-h-[44px] min-w-[44px] touch-manipulation">
                 <Menu className="h-6 w-6 text-white" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-[#6b3e2b]">
+            <SheetContent side="right" className="bg-[#6b3e2b] w-[280px] sm:w-[320px]">
               <div className="flex flex-col gap-6 p-6">
                 <Link href="/" className="flex items-center gap-2" prefetch={false}>
                   <Logo className="h-8 w-8 text-white" />
-                  <span className="font-headline text-2xl font-semibold text-white drop-shadow-md">
-                    <span className="whitespace-nowrap text-lg md:text-2xl"></span>Luv Yoga - Yêu Yoga hơn mỗi ngày</span>
+                  <span className="font-headline text-xl font-semibold text-white drop-shadow-md">
+                    Luv Yoga
+                  </span>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navItems.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-lg font-medium text-white drop-shadow-md transition-colors hover:text-white/80"
+                      className="text-lg font-medium text-white drop-shadow-md transition-colors hover:text-white/80 py-2 px-3 rounded-md hover:bg-white/10 min-h-[44px] flex items-center touch-manipulation"
                       prefetch={false}
                     >
                       {link.name}
