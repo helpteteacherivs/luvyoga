@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://luvyoga.vn'),
+  metadataBase: new URL('https://luvyoga.online'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Luv Yoga - Yêu Yoga hơn mỗi ngày',
     description: 'Yoga định tuyến và hỗ trợ trị liệu phục hồi, đề cao sức khoẻ và sự an toàn trong tập luyện.',
-    url: 'https://luvyoga.vn',
+    url: 'https://luvyoga.online',
     siteName: 'Luv Yoga',
     images: [
       {
@@ -86,7 +86,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               "name": "Luv Yoga",
               "description": "Yoga định tuyến và hỗ trợ trị liệu phục hồi, đề cao sức khoẻ và sự an toàn trong tập luyện",
-              "url": "https://luvyoga.vn",
+              "url": "https://luvyoga.online",
               "telephone": "+84-35-251-8855",
               "email": "luvyoga.official@gmail.com",
               "address": {
@@ -108,7 +108,7 @@ export default function RootLayout({
                 "Sa-Su 17:30-20:25"
               ],
               "priceRange": "$$",
-              "image": "https://luvyoga.vn/images/banner-luvyoga.jpg",
+              "image": "https://luvyoga.online/images/banner-luvyoga.jpg",
               "sameAs": [
                 "https://www.facebook.com/LuvYoga.Official",
                 "https://www.instagram.com/luvyoga.official"
