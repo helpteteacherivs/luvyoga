@@ -3,6 +3,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import ContactFAB from '@/components/layout/contact-fab';
+import StickyBookBar from '@/components/layout/sticky-bookbar';
 
 export const metadata: Metadata = {
   title: {
@@ -129,6 +130,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+        <StickyBookBar />
         <ContactFAB />
         <Toaster />
       </body>

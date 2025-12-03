@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
+import LazyIframe from '@/components/ui/lazy-iframe';
 
 export default function AboutSection() {
   // Prefer the local uploaded about image (local2) but fall back to the remote/about placeholder
@@ -90,30 +91,28 @@ export default function AboutSection() {
             <div className="grid gap-6 md:grid-cols-2 items-start">
               <div className="rounded-lg overflow-hidden shadow-lg border p-2 bg-card">
                 <div className="aspect-[500/729] w-full">
-                  <iframe
+                  <LazyIframe
                     src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLuvYoga.Official%2Fposts%2Fpfbid02QJpfvbSDcSQnPCE2QnbKDr3Q9kd6HogZqxsbUWvKXdpyZy3PeATVBv1ZUTP58qk1l&show_text=true&width=500"
                     title="Luv Yoga Facebook post"
                     width="100%"
-                    height="100%"
+                    height={729}
                     style={{ border: 'none', overflow: 'hidden' }}
-                    scrolling="no"
-                    frameBorder={0}
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    placeholder={<div className="p-6 text-center text-sm text-muted-foreground">Bài đăng Facebook — đang tải…</div>}
                   />
                 </div>
               </div>
 
               <div className="rounded-lg overflow-hidden shadow-lg border p-2 bg-card">
                 <div className="aspect-[295/476] w-full flex items-center justify-center">
-                  <iframe
+                  <LazyIframe
                     src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F824210390396607%2F&show_text=false&width=295&t=0"
                     title="Luv Yoga Facebook reel"
                     width="100%"
-                    height="100%"
+                    height={476}
                     style={{ border: 'none', overflow: 'hidden' }}
-                    scrolling="no"
-                    frameBorder={0}
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    placeholder={<div className="p-6 text-center text-sm text-muted-foreground">Video Facebook — đang tải…</div>}
                   />
                 </div>
               </div>
