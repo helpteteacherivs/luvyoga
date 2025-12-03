@@ -4,20 +4,24 @@
 
 @layer base {
   :root {
-    --background: 35 56% 91%;
-    --foreground: 35 20% 20%;
-    --card: 35 50% 95%;
-    --card-foreground: 35 20% 20%;
-    --popover: 35 50% 95%;
-    --popover-foreground: 35 20% 20%;
-    --primary: 35 59% 63%;
-    --primary-foreground: 35 20% 98%;
-    --secondary: 35 50% 85%;
-    --secondary-foreground: 35 20% 20%;
-    --muted: 35 50% 88%;
-    --muted-foreground: 35 20% 40%;
-    --accent: 40 66% 66%;
-    --accent-foreground: 35 20% 15%;
+    /* Brand tokens — warmer, elegant palette */
+    --background: 28 52% 96%; /* very light, warm */
+    --foreground: 25 20% 14%;  /* dark warm text */
+    --card: 28 50% 100%;
+    --card-foreground: 25 20% 14%;
+    --popover: 28 50% 100%;
+    --popover-foreground: 25 20% 14%;
+    /* Primary — brand brown */
+    --primary: 18 42% 29%;
+    --primary-foreground: 0 0% 100%;
+    /* Secondary / soft sand */
+    --secondary: 34 38% 64%;
+    --secondary-foreground: 25 20% 14%;
+    /* Muted / subtle text */
+    --muted: 32 30% 88%;
+    --muted-foreground: 28 22% 44%;
+    --accent: 34 38% 64%;
+    --accent-foreground: 25 20% 14%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 35 40% 85%;
@@ -28,23 +32,26 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
+    --radius: 1rem;
+    --container-padding-sm: 1rem;
+    --container-padding-md: 1.5rem;
+    --container-padding-lg: 2.5rem;
   }
   .dark {
-    --background: 35 10% 10%;
-    --foreground: 35 20% 85%;
-    --card: 35 10% 15%;
-    --card-foreground: 35 20% 85%;
-    --popover: 35 10% 10%;
-    --popover-foreground: 35 20% 85%;
-    --primary: 35 59% 63%;
-    --primary-foreground: 35 20% 15%;
-    --secondary: 35 10% 20%;
-    --secondary-foreground: 35 20% 85%;
-    --muted: 35 10% 20%;
-    --muted-foreground: 35 20% 60%;
-    --accent: 40 66% 66%;
-    --accent-foreground: 35 20% 15%;
+    --background: 25 8% 8%;
+    --foreground: 25 20% 90%;
+    --card: 25 10% 12%;
+    --card-foreground: 25 20% 90%;
+    --popover: 25 10% 12%;
+    --popover-foreground: 25 20% 90%;
+    --primary: 18 42% 35%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 34 38% 28%;
+    --secondary-foreground: 25 20% 90%;
+    --muted: 25 10% 18%;
+    --muted-foreground: 25 20% 64%;
+    --accent: 34 38% 46%;
+    --accent-foreground: 25 20% 90%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 35 10% 20%;
@@ -63,7 +70,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased leading-relaxed;
+    font-feature-settings: "liga" 1, "kern" 1;
   }
   html {
     scroll-behavior: smooth;
@@ -93,7 +101,7 @@
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
