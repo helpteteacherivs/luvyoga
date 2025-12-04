@@ -95,6 +95,12 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+        {/* Prominent App CTA for desktop */}
+        <div className="hidden md:flex items-center md:ml-4">
+          <Button asChild size="lg" className="bg-white text-primary px-4 py-2 rounded-lg shadow-md hover:opacity-95">
+            <Link href="/luvyoga-app" prefetch={false}>LuvYOGA App</Link>
+          </Button>
+        </div>
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
@@ -123,6 +129,12 @@ export default function Header() {
                     </Link>
                   ))}
                 </nav>
+                {/* App CTA in mobile sheet */}
+                <div className="pt-4">
+                  <Link href="/luvyoga-app" prefetch={false} className="block">
+                    <Button size="lg" className="w-full bg-white text-primary font-semibold">LuvYOGA App</Button>
+                  </Link>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
