@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-headline text-lg font-semibold">Liên Hệ</h3>
+            <h3 className="font-headline text-lg font-semibold text-primary">Liên Hệ</h3>
             <div className="space-y-3 text-muted-foreground">
               <a
                 href="https://maps.app.goo.gl/Z7b8kdwoQcx2y4JPA"
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
 
             <div className="md:col-span-1 flex flex-col items-start">
-              <h3 className="font-headline text-lg font-semibold">Vị Trí</h3>
+              <h3 className="font-headline text-lg font-semibold text-primary">Vị Trí</h3>
               <div className="mt-6 rounded-lg overflow-hidden shadow-lg w-full max-w-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.179844196562!2d107.04734257583961!3d10.949783655970549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174e57aefde23d1%3A0xba400c9912517696!2sLuv%20Yoga!5e0!3m2!1sen!2sus!4v1759109316615!5m2!1sen!2sus"

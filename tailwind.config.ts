@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Alegreya', 'serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
         headline: ['Alegreya', 'serif'],
         code: ['monospace'],
       },
